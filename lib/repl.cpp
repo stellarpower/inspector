@@ -45,7 +45,7 @@ extern "C" {
       prompt.sendInspectorLocation(path, lineNumber);
       while (true) {
         std::string statement = prompt.getCppStatement();
-        if (statement == ".quit") {
+        if ((statement == ".quit") || (statement == ".q")) {
           prompt.sendResult("");
           return;
         }

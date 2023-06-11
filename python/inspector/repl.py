@@ -69,7 +69,7 @@ class Repl():
             response = json.dumps(dict(input=answer), ensure_ascii=True)
             self.output.sendall(response.encode("utf-8"))
             self.output.sendall(b'\0')
-            if answer == '.quit':
+            if (answer == '.quit') or (answer == '.q'):
                 print("Session ended.\n")
                 break
             response = next(self.input)
